@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@theme {
+    --font-montserrat: "Montserrat", sans-serif;
+
+    --color-dark: #1b1b1b;
+    --color-light: #f5f5f5;
+    --color-primary: #863e96;
+    --color-primaryDark: #58e609;
+
+    --breakpoint-2xl: 1535px;
+    --breakpoint-xl: 1279px;
+    --breakpoint-lg: 1023px;
+    --breakpoint-md: 767px;
+    --breakpoint-sm: 639px;
+    --breakpoint-xs: 479px;
+
+    --animate-slowSpin: spin 8s linear infinite;
+}
+
+/* Light mode variables */
+:root {
+  --background: var(--color-light);
+  --text: var(--color-dark);
+}
+
+/* Dark mode variables */
+.dark {
+  --background: var(--color-dark);
+  --text: var(--color-light);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+}
+
+.circularLight{
+    background: repeating-radial-gradient(rgba(0,0,0,0.4) 2px, #f5f5f5 5px, #f5f5f5 100px);
+}
+
+.circularDark {
+  background: repeating-radial-gradient(rgba(255,255,255,0.2) 2px, #1b1b1b 5px, #1b1b1b 100px);
+}
+
+@media (max-width: 1023px) {
+    .circularLight {
+        background: repeating-radial-gradient(rgba(0,0,0,0.4) 2px, var(--color-light) 5px, var(--color-light) 80px);
+    }
+    .circularDark {
+        background: repeating-radial-gradient(rgba(255,255,255,0.2) 2px, var(--color-dark) 8px, var(--color-dark) 80px);
+    }
+}
+
+@media (max-width: 767px) {
+    .circularLight {
+        background: repeating-radial-gradient(rgba(0,0,0,0.4) 2px, var(--color-light) 5px, var(--color-light) 60px);
+    }
+    .circularDark {
+        background: repeating-radial-gradient(rgba(255,255,255,0.2) 2px, var(--color-dark) 6px, var(--color-dark) 60px);
+    }
+}
+
+@media (max-width: 639px) {
+    .circularLight {
+        background: repeating-radial-gradient(rgba(0,0,0,0.4) 2px, var(--color-light) 5px, var(--color-light) 40px);
+    }
+    .circularDark {
+        background: repeating-radial-gradient(rgba(255,255,255,0.2) 2px, var(--color-dark) 4px, var(--color-dark) 40px);
+    }
+}
+
+@media (max-width: 479px) {
+    .circularLight {
+        background: repeating-radial-gradient(rgba(0,0,0,0.4) 2px, var(--color-light) 5px, var(--color-light) 30px);
+    }
+    .circularDark {
+        background: repeating-radial-gradient(rgba(255,255,255,0.2) 2px, var(--color-dark) 5px, var(--color-dark) 30px);
+    }
+}
+
