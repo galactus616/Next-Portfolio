@@ -7,6 +7,7 @@ import Link from "next/link";
 import React from "react";
 import { useTheme } from 'next-themes';
 import velora from '../../public/images/projects/Velora.png'
+import kivo from '../../public/images/projects/Kivo.png'
 import TransitionEffect from "@/components/TransitionEffect";
 
 const FeaturedProject = ({ type, title, summary, img, link, github }) => {
@@ -125,7 +126,7 @@ const projects = () => {
                 github="https://github.com/galactus616/Velora"
               />
             </div>
-            <div className="col-span-6 max-sm:col-span-12">
+            {/* <div className="col-span-6 max-sm:col-span-12">
               <Project
                 type="Project"
                 title="Project 1"
@@ -142,33 +143,15 @@ const projects = () => {
                 link="#"
                 github="#"
               />
-            </div>
+            </div> */}
             <div className="col-span-12">
               <FeaturedProject
                 type="Featured Project"
-                title="Crypto Screener Application"
-                summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts.It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your local currency."
-                img={velora}
-                link="#"
-                github="#"
-              />
-            </div>
-            <div className="col-span-6 max-sm:col-span-12">
-              <Project
-                type="Project"
-                title="Project 1"
-                img={velora}
-                link="#"
-                github="#"
-              />
-            </div>
-            <div className="col-span-6 max-sm:col-span-12">
-              <Project
-                type="Project"
-                title="Project 1"
-                img={velora}
-                link="#"
-                github="#"
+                title="Kivo (Microservices - Realtime Chat)"
+                summary="Kivo is a high-concurrency chat ecosystem built on a microservices architecture. It features sub-50ms message delivery using Socket.io and Redis, asynchronous task processing with RabbitMQ, and a glassmorphic UI. Engineered for scalability with independent services for messaging, auth, and media processing."
+                img={kivo}
+                link="http://56.228.24.6:3000"
+                github="https://github.com/galactus616/kivo"
               />
             </div>
           </div>
